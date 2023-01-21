@@ -9,8 +9,13 @@
   font-family: "Monster Clubhouse";
   font-size: 67px;
   line-height: 80px;
-  padding: 20px 30px;
+  padding: 10px 0 10px 30px;
   color: $color-secondary;
+
+  @include small {
+    font-size: 54px;
+    padding-left: 15px;
+  }
 }
 
 .recipes-section-content {

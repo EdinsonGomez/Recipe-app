@@ -19,11 +19,11 @@
 
   @include medium {
     .navigation-items-content {
-      display: flex;
+      display: none;
     }
 
     .navigation-item-home {
-      display: none;
+      display: block;
     }
   }
 }
@@ -52,6 +52,7 @@
 .navigation-item-home {
   @extend .navigation-item-default;
   margin-right: 25px;
+  display: none;
 
   img {
     width: 25px;
@@ -62,7 +63,7 @@
 .navigation-items-content {
   padding-right: 10px;
   column-gap: 10px;
-  display: none;
+  display: flex;
 }
 
 .navigation-items-link {
@@ -74,7 +75,6 @@
 
   &:hover {
     color: $color-secondary;
-    // cursor: pointer;
   }
 
   &.active {

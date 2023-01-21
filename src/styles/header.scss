@@ -1,3 +1,5 @@
+@import "../styles//variables.scss";
+
 .header-container {
   width: 100%;
   height: 400px;
@@ -30,4 +32,51 @@
   font-family: "Monster Clubhouse";
   font-size: 67px;
   line-height: 80px;
+}
+
+.navigation-alt {
+  display: none;
+  position: relative;
+
+  @include medium {
+    display: block;
+    margin-bottom: 90px;
+  }
+
+  @media only screen and (max-width: 735px) {
+    margin-bottom: 170px;
+  }
+}
+
+.navigation-alt-content {
+  display: flex;
+  column-gap: 12px;
+  row-gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: absolute;
+  top: -20px;
+  width: 100%;
+  min-width: 400px;
+}
+
+.navigation-alt-item {
+  width: 110px;
+  height: 85px;
+  border-radius: 10px;
+  background-color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  box-shadow: 2px 3px 10px 3px #8395A766;
+}
+
+.navigation-alt-item-text {
+  text-align: center;
+  color: $color-primary;
+  font-family: "Poppins";
+  font-size: 14px;
+  font-weight: normal;
+  margin: 10px 0;
 }

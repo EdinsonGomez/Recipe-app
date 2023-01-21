@@ -4,10 +4,35 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 70px;
-  padding-top: 20px;
+  flex-wrap: nowrap;
+  // margin: 5px 0;
+  // padding: 0 70px;
+  // padding-top: 20px;
   height: 167px;
   background-image: linear-gradient(#C2E3F3, #6AA3C1);
+
+  img {
+    width: 536px;
+    height: 248px;
+  }
+
+  @include small {
+    height: 70px;
+
+    img {
+      width: 228px;
+      height: 106px;
+    }
+  }
+
+  @include medium {
+    height: 116px;
+
+    img {
+      width: 379px;
+      height: 175px;
+    }
+  }
 }
 
 .footer-text {
@@ -17,4 +42,14 @@
   color: $color-primary;
   line-height: 67px;
   margin-left: 90px;
+  white-space: nowrap;
+
+  @include small {
+    font-size: 23px;
+    margin-left: 20px;
+  }
+
+  @include medium {
+    font-size: 39px;
+  }
 }
