@@ -1,0 +1,20 @@
+@import "./variables.scss";
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 70px;
+  padding-top: 20px;
+  height: 167px;
+  background-image: linear-gradient(#C2E3F3, #6AA3C1);
+}
+
+.footer-text {
+  font-family: "Monster Clubhouse";
+  font-size: 56px;
+  font-weight: normal;
+  color: $color-primary;
+  line-height: 67px;
+  margin-left: 90px;
+}

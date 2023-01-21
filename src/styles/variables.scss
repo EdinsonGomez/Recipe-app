@@ -1,0 +1,25 @@
+$color-primary: #425966;
+$color-secondary: #D84A4A;
+
+@font-face {
+  font-family: "Monster Clubhouse";
+  src: url("../assets/fonts/Monster\ Clubhouse.ttf") format("truetype")
+}
+
+@mixin small {
+  @media only screen and (min-width: 600px) {
+    @content
+  }
+}
+
+@mixin medium {
+  @media only screen and (min-width: 1024px) {
+    @content
+  }
+}
+
+@mixin large {
+  @media only screen and (min-width: 1440px) {
+    @content
+  }
+}

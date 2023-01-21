@@ -1,0 +1,83 @@
+@import "./variables.scss";
+
+.navigation-item-default {
+  border: none;
+  background-color: inherit;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.navigation-content {
+  width: 100%;
+  height: 69px;
+  background-color: #FFFFFF;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include medium {
+    .navigation-items-content {
+      display: flex;
+    }
+
+    .navigation-item-home {
+      display: none;
+    }
+  }
+}
+
+.navigation-name {
+  padding-left: 70px;
+}
+
+.navigation-name-left {
+  font-family: "Monster Clubhouse";
+  font-size: 40px;
+  line-height: 48px;
+  font-weight: normal;
+  color: $color-primary;
+  letter-spacing: 1.15px;
+}
+
+.navigation-name-right {
+  font-family: "Poppins";
+  font-size: 30px;
+  font-weight: normal;
+  letter-spacing: 0.86px;
+  color: $color-secondary;
+}
+
+.navigation-item-home {
+  @extend .navigation-item-default;
+  margin-right: 25px;
+
+  img {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+.navigation-items-content {
+  padding-right: 10px;
+  column-gap: 10px;
+  display: none;
+}
+
+.navigation-items-link {
+  @extend .navigation-item-default;
+  color: $color-primary;
+  font-size: 17px;
+  font-family: "Poppins";
+  font-weight: 500;
+
+  &:hover {
+    color: $color-secondary;
+    // cursor: pointer;
+  }
+
+  &.active {
+    color: $color-secondary;
+  }
+}

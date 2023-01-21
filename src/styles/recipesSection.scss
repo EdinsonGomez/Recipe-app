@@ -1,0 +1,35 @@
+@import "./variables.scss";
+
+.recipes-section-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.recipes-section-title {
+  font-family: "Monster Clubhouse";
+  font-size: 67px;
+  line-height: 80px;
+  padding: 20px 30px;
+  color: $color-secondary;
+}
+
+.recipes-section-content {
+  overflow: hidden;
+  overflow-x: scroll;
+  scrollbar-width: none;
+  padding: 0 20px;
+}
+
+.recipes-section-content::-webkit-scrollbar {
+  display: none;
+}
+
+.recipes-section-list {
+  padding-top: 75px;
+  display: flex;
+  column-gap: 30px;
+  min-height: 380px;
+  justify-content: center;
+  flex-wrap: nowrap;
+  min-width: 900px;
+}
