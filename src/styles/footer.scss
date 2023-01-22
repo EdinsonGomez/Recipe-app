@@ -1,15 +1,29 @@
 @import "./variables.scss";
 
 .footer {
+  overflow: visible;
+  height: 200px;
+  display: flex;
+  align-items: center;
+
+  @include small {
+    overflow: hidden;
+  }
+
+  @include medium {
+    overflow: hidden;
+  }
+}
+
+.footer-content {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: nowrap;
-  // margin: 5px 0;
-  // padding: 0 70px;
-  // padding-top: 20px;
-  height: 167px;
   background-image: linear-gradient(#C2E3F3, #6AA3C1);
+  overflow: visible;
+  height: 167px;
 
   img {
     width: 536px;
@@ -26,10 +40,10 @@
   }
 
   @include medium {
-    height: 116px;
+    height: 100px;
 
     img {
-      width: 379px;
+      width: 300px;
       height: 175px;
     }
   }
@@ -45,11 +59,12 @@
   white-space: nowrap;
 
   @include small {
-    font-size: 23px;
-    margin-left: 20px;
+    font-size: 15px;
+    margin-left: 5px;
   }
 
   @include medium {
     font-size: 39px;
+    margin-left: 30px;
   }
 }
