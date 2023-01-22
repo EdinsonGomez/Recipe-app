@@ -14,6 +14,7 @@ export const mapFromApiToRecipes = (list: RecipeResponseApi[]): Recipe[] => {
 
       if (res.length >= 4) {
         res = res.slice(0, 4);
+        return
       }
 
     } else {
@@ -24,7 +25,7 @@ export const mapFromApiToRecipes = (list: RecipeResponseApi[]): Recipe[] => {
         servings: recipeFromApi.num_servings,
         preparationTime: parsePreparationTime(recipeFromApi.total_time_minutes),
         difificulty: getDifficulty(recipeFromApi.tags),
-        usersRating: parseUserRating(recipeFromApi.user_rating),
+        usersRating: parseUserRating(recipeFromApi.user_ratings),
       })
     }
 
@@ -35,11 +36,11 @@ export const mapFromApiToRecipes = (list: RecipeResponseApi[]): Recipe[] => {
 
 const parsePreparationTime = (minutes: number | undefined): string => `${minutes ?? "--"}`;
 
-const parseUserRating = (userRating: UserRating | null | undefined): number => {
+const parseUserRating = (userRatings: UserRating | null | undefined): number => {
   let rating = 0;
 
-  if (userRating?.score) {
-    rating = userRating.score * 5;
+  if (userRatings?.score) {
+    rating = userRatings.score * 5;
   }
 
   return rating;

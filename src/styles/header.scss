@@ -70,6 +70,16 @@
   justify-content: flex-end;
   align-items: center;
   box-shadow: 2px 3px 10px 3px #8395A766;
+
+  &:hover {
+    cursor: pointer;
+    width: 120px;
+    height: 95px;
+  }
+
+  &.active {
+    box-shadow: 2px 3px 10px 3px rgba($color-secondary, 0.6);
+  }
 }
 
 .navigation-alt-item-text {

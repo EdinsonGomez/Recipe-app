@@ -1,4 +1,4 @@
-import { createaRequest } from "../utils/request";
+import axios from "../utils/request";
 import { AxiosError } from "axios";
 import { RecipeResponseApi } from "../models/recipeRequest.model";
 
@@ -13,7 +13,7 @@ interface RequestResponse {
 }
 
 export const getRecipes = (params: RequestParams): Promise<RequestResponse>  => {
-  return createaRequest()
+  return axios
     .get("recipes/list", {
       params: { ...params, from: 0, size: 4 }
     })

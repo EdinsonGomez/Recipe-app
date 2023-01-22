@@ -1,17 +1,19 @@
 @import "./variables.scss";
 
 $size-icons: 25px;
+$height-card: 270px;
 
 .recipe-item {
   width: 266px;
-  height: 270px;
+  height: $height-card;
   position: relative;
   background-color: #E9F1FA;
   border-radius: 20px;
   box-shadow: 5px 6px 10px 4px #BFC4CAD1;
   transition: 0.2s;
   display: flex;
-  align-items: flex-end;
+  flex-direction: column;
+  justify-content: flex-end;
 
   &:hover {
     height: 330px;
@@ -36,7 +38,7 @@ $size-icons: 25px;
   translate: -50%;
   top: -70px;
   box-shadow: 4px 5px 8px 5px rgba(0, 0, 0, 0.35);
-  border-radius: 20px;
+  border-radius: 50%;
   overflow: hidden;
 
   img {
@@ -48,15 +50,13 @@ $size-icons: 25px;
 
 .recipe-item-content {
   width: 100%;
+  height: $height-card * 0.7;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
 .recipe-item-content-name {
-  // margin-bottom: 60px;
-  display: flex;
-  justify-content: center;
   text-align: center;
   width: 100%;
   font-family: "Monster Clubhouse";
@@ -68,7 +68,7 @@ $size-icons: 25px;
 .recipe-item-content-footer {
   display: flex;
   justify-content: space-between;
-  padding: 15px
+  padding: 15px;
 }
 
 .recipe-item-content-rating {

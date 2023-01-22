@@ -15,6 +15,6 @@ export interface RecipeResponseApi {
   thumbnail_url?: string
   total_time_minutes?: number
   tags?: Tag[] | null
-  user_rating?: UserRating | null
+  user_ratings?: UserRating | null
   recipes: RecipeResponseApi[]
 }
