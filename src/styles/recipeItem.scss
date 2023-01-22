@@ -14,6 +14,7 @@ $height-card: 270px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  align-items: center;
 
   &:hover {
     height: 330px;
@@ -49,11 +50,12 @@ $height-card: 270px;
 }
 
 .recipe-item-content {
-  width: 100%;
-  height: $height-card * 0.7;
+  width: 90%;
+  height: $height-card * 0.6;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
 }
 
 .recipe-item-content-name {
@@ -68,7 +70,8 @@ $height-card: 270px;
 .recipe-item-content-footer {
   display: flex;
   justify-content: space-between;
-  padding: 15px;
+  width: 100%;
+  margin-bottom: 8px;
 }
 
 .recipe-item-content-rating {

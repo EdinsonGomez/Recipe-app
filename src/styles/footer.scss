@@ -55,16 +55,16 @@
   font-weight: normal;
   color: $color-primary;
   line-height: 67px;
-  margin-left: 90px;
+  margin-left: 150px;
   white-space: nowrap;
 
-  @include small {
-    font-size: 15px;
-    margin-left: 5px;
+  @include medium {
+    font-size: 47px;
+    margin-left: 80px;
   }
 
-  @include medium {
-    font-size: 39px;
-    margin-left: 30px;
+  @include small {
+    font-size: 30px;
+    margin-left: 5px;
   }
 }

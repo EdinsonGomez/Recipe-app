@@ -43,7 +43,7 @@ const RecipeItem = ({ recipe }: RecipeItemProps) => {
         <img src={recipe.imgUrl} alt={recipe.name} />
       </div>
       <div className="recipe-item-content">
-        <h3 className="recipe-item-content-name">{recipe.name}</h3>
+        <div className="recipe-item-content-name">{recipe.name}</div>
         <div className="recipe-item-content-footer">
           <div className="recipe-item-content-rating">
             <img src={StartIcon} alt={`start-icon-${recipe.name}`} />
