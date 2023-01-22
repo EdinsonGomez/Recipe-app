@@ -36,28 +36,31 @@ $size-icons: 25px;
   translate: -50%;
   top: -70px;
   box-shadow: 4px 5px 8px 5px rgba(0, 0, 0, 0.35);
-  border-radius: 50%;
+  border-radius: 20px;
   overflow: hidden;
 
   img {
     width: 100%;
     height: 100%;
-    object-fit: none;
-    // object-position: -22px -22px;
+    object-fit: cover;
   }
 }
 
 .recipe-item-content {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .recipe-item-content-name {
-  margin-bottom: 60px;
+  // margin-bottom: 60px;
   display: flex;
   justify-content: center;
+  text-align: center;
   width: 100%;
   font-family: "Monster Clubhouse";
-  font-size: 35px;
+  font-size: 25px;
   font-weight: normal;
   color: $color-secondary;
 }

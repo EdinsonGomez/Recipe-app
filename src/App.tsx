@@ -1,13 +1,18 @@
-import React from 'react';
+import React, { useReducer } from 'react';
 import Home from "./views/Home";
 import Navigation from "./components/Navigation";
 
-function App() {
+import { AppContext } from "./store/context";
+import { reducer } from "./store/reducer";
+import { initialAppState } from "./store/state";
+
+const App = () => {
+  const [state, dispatch] = useReducer(reducer, initialAppState);
   return (
-    <div className="App">
+    <AppContext.Provider value={{ state, dispatch }}>
       <Navigation />
       <Home />
-    </div>
+    </AppContext.Provider>
   );
 }
 

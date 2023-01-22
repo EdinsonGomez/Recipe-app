@@ -1,38 +1,60 @@
-import { NavigationItem } from "../models/navItem.model";
+import { NavigationItem, NavigationPaths } from "../models/navItem.model";
 
 export const navigationConfig: ReadonlyArray<NavigationItem> = [
   {
     name: "Home",
-    path: "home"
+    path: NavigationPaths.HOME,
+    queryParams: {
+      tags: "",
+      q: ""
+    }
   },
   {
     name: "Vegetarianos",
-    path: "vegetarian",
+    path: NavigationPaths.VEGETARIAN,
     icon: "../assets/icons/ic_vegetarian.svg",
+    queryParams: {
+      tags: "vegetarian"
+    }
   },
   {
     name: "Platos principales",
-    path: "meal",
+    path: NavigationPaths.MEAL,
     icon: "../assets/icons/ic_main.svg",
+    queryParams: {
+      tags: "one_top_app_meat"
+    }
   },
   {
     name: "Tortas",
-    path: "dessert",
-    icon: "../assets/icons/ic_cake.svg"
+    path: NavigationPaths.DESSERT,
+    icon: "../assets/icons/ic_cake.svg",
+    queryParams: {
+      tags: "desserts"
+    }
   },
   {
     name: "Comida Rapida",
-    path: "fast_food",
+    path: NavigationPaths.FAST_FOOD,
     icon: "../assets/icons/ic_fast-food.svg",
+    queryParams: {
+      q: "fast food"
+    }
   },
   {
     name: "Menu de niños",
-    path: "kid_friendly",
+    path: NavigationPaths.KID_FRIENDLY,
     icon: "../assets/icons/ic_kids.svg",
+    queryParams: {
+      tags: "kid_friendly"
+    }
   },
   {
     name: "Sopas",
-    path: "soup",
-    icon: "../assets/icons/ic_soup.svg"
+    path: NavigationPaths.SOUP,
+    icon: "../assets/icons/ic_soup.svg",
+    queryParams: {
+      q: "soup"
+    }
   }
 ];
