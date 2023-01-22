@@ -2,6 +2,8 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and the Typescript template.
 
+Live demo: [Recipe-app](https://recipe-app-two-cyan.vercel.app)
+
 ## Run project
 
 To run follow these steps: 
