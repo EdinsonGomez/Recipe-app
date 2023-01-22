@@ -22,7 +22,6 @@ export const useNavigation = (): [AppState, (route: NavigationPaths) => void] =>
       if (navigationRoute?.queryParams) {
         getRecipes(navigationRoute.queryParams).then(
           (res) => {
-            console.log("res: ", res.results);
             dispatch(setRecipesListAction(res.results))
           }
         )
